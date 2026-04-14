@@ -1,0 +1,7 @@
+source_city,destination_city,supply_or_demand,unit_cost
+Istanbul,Ankara,200,15
+Istanbul,Izmir,200,12
+Istanbul,Bursa,200,8
+Adana,Ankara,180,10
+Adana,Izmir,180,18
+Adana,Bursa,180,22

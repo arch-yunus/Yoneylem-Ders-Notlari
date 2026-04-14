@@ -1,0 +1,6 @@
+location_id,location_name,latitude,longitude,fixed_cost,capacity
+1,Istanbul_Anadolu,41.01,29.12,12000,500
+2,Ankara_Merkez,39.92,32.85,10000,400
+3,Izmir_Egeli,38.42,27.14,9500,350
+4,Bursa_Organize,40.18,29.06,8000,300
+5,Adana_Guney,37.00,35.32,7500,280
