@@ -1,6 +1,7 @@
 """
-🏗️ Yoneylem-Ders-Notlari: Master OR Engine
+🏗️ Yoneylem-Ders-Notlari: Master OR Engine v2.0
 Central CLI for Operations Research Solvers and Notes.
+Now with Metaheuristics and Nonlinear Intelligence.
 """
 
 import os
@@ -12,10 +13,10 @@ def clear_screen():
 def print_banner():
     print("""
     ========================================================
-    🏗️  OPERATIONS RESEARCH MASTER ENGINE v1.0
+    🏗️  OPERATIONS RESEARCH MASTER ENGINE v2.0
     ========================================================
-    Kapsamlı Optimizasyon ve Karar Bilimi Arşivi
-    "Linearity is everywhere, optimization is the limit."
+    Kapsamlı Optimizasyon, AI & Meta-Sezgisel Ekosistemi
+    "Beyond linearity: Metaheuristics and Nonlinearity"
     ========================================================
     """)
 
@@ -23,11 +24,13 @@ def main_menu():
     while True:
         clear_screen()
         print_banner()
-        print(" [1] 📏 Doğrusal Programlama (Simplex/Dual/Sensitivity)")
+        print(" [1] 📏 Doğrusal Programlama (Simplex/Dual)")
         print(" [2] 🕸️ Ağ Optimizasyonu (Kısa Yol/Max-Flow)")
-        print(" [3] 🔢 Tamsayılı Programlama (Sırt Çantası/Lokasyon)")
-        print(" [4] 🎲 Stokastik Modeller (Kuyruk/Markov)")
+        print(" [3] 🔢 Tamsayılı Programlama (Sırt Çantası)")
+        print(" [4] 🎲 Stokastik Modeller (Kuyruk/Markov/MC)")
         print(" [5] ♟️ Oyun Teorisi & Strateji")
+        print(" [6] 🧬 Meta-Sezgisel Algoritmalar (GA/SA)")
+        print(" [7] 📈 Doğrusal Olmayan Programlama (NLP)")
         print(" [Q] ❌ Çıkış")
         print("-" * 56)
         
@@ -41,6 +44,8 @@ def main_menu():
         elif choice == '3': sub_menu_integer()
         elif choice == '4': sub_menu_stochastic()
         elif choice == '5': run_tool('05_Game_Theory_and_Simulation/README.md', is_doc=True)
+        elif choice == '6': sub_menu_meta()
+        elif choice == '7': sub_menu_nlp()
         else:
             input("Geçersiz seçim. Devam etmek için Enter'a basın...")
 
@@ -48,7 +53,6 @@ def run_tool(path, is_doc=False):
     clear_screen()
     if is_doc:
         print(f"📖 Dökümantasyon Açılıyor: {path}\n")
-        # In a real environment, this might open a browser or local viewer
         print("Döküman içeriği klasör içinde README.md olarak mevcuttur.")
     else:
         print(f"🚀 Modül başlatılıyor: {path}\n")
@@ -97,10 +101,34 @@ def sub_menu_stochastic():
         print("🎲 Stokastik Modeller Araç Kutusu")
         print("[1] Markov Zinciri Analizi")
         print("[2] Kuyruk Teorisi Simülasyonu")
+        print("[3] Monte Carlo İntegrasyon")
         print("[B] Geri")
         c = input("> ").upper()
         if c == '1': run_tool('04_Stochastic_Models/markov_chain_analyzer.py')
         elif c == '2': run_tool('04_Stochastic_Models/queuing_theory_simulation.py')
+        elif c == '3': run_tool('04_Stochastic_Models/monte_carlo_integration.py')
+        elif c == 'B': break
+
+def sub_menu_meta():
+    while True:
+        clear_screen()
+        print("🧬 Meta-Sezgisel Araç Kutusu")
+        print("[1] Genetik Algoritma (TSP)")
+        print("[2] Simüle Edilmiş Tavlama (SA)")
+        print("[B] Geri")
+        c = input("> ").upper()
+        if c == '1': run_tool('06_Metaheuristics/genetic_algorithm_tsp.py')
+        elif c == '2': run_tool('06_Metaheuristics/simulated_annealing_solver.py')
+        elif c == 'B': break
+
+def sub_menu_nlp():
+    while True:
+        clear_screen()
+        print("📈 Doğrusal Olmayan Programlama Araç Kutusu")
+        print("[1] Gradyan İnişi (Gradient Descent)")
+        print("[B] Geri")
+        c = input("> ").upper()
+        if c == '1': run_tool('07_Nonlinear_Programming/gradient_descent_optimizer.py')
         elif c == 'B': break
 
 if __name__ == "__main__":
