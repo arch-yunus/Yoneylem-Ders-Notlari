@@ -1,13 +1,30 @@
-numpy>=1.24.0
-pandas>=2.0.0
-scipy>=1.11.0
-matplotlib>=3.7.0
-networkx>=3.1.0
+# Yöneylem Araştırması — Python Bağımlılıkları
+# Tüm modüller için gerekli kütüphaneler
+
+# ── Optimizasyon Çerçeveleri ───────────────
 pulp>=2.7.0
 pyomo>=6.6.0
-simpy>=4.1.0
-plotly>=5.15.0
+ortools>=9.7.0
+
+# ── Sayısal Hesaplama ──────────────────────
+numpy>=1.24.0
+scipy>=1.11.0
+
+# ── Veri İşleme ────────────────────────────
+pandas>=2.0.0
+
+# ── Graf & Ağ Analizi ─────────────────────
+networkx>=3.1
+
+# ── Görselleştirme ─────────────────────────
+matplotlib>=3.7.0
+
+# ── Simülasyon ─────────────────────────────
+simpy>=4.1.1
+
+# ── Notebook Desteği ──────────────────────
 jupyter>=1.0.0
-ipython>=8.14.0
-deap>=1.4.0
-ortools>=9.7.2996
+ipykernel>=6.25.0
+
+# ── Geliştirme Araçları ────────────────────
+tqdm>=4.65.0
